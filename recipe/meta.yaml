@@ -12,11 +12,12 @@ source:
 build:
   skip: true  # [py2k]
   script: {{ PYTHON }} -m pip install . -vv
-  number: 3
+  number: 4
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - pip
     - python
